@@ -1,8 +1,8 @@
 from flask import Flask
 
-app = Flask(_name_)
+app = Flask(__name__)
 
-@app.route('/return')
+@app.route('/')
 def return_message():
     return '<h1>Hello from Saurabh</h1>'
 
@@ -10,5 +10,5 @@ def return_message():
 def magicbus_message():
     return '<h1>Hello from Magicbus</h1>'
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     app.run(debug=True)
